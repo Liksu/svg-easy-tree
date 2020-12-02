@@ -4,6 +4,30 @@ Compiles simple tree object into DOM structure (SVG or HTML) and add it to a par
 
 Tree is a structure of `node` objects that describes DOM that you want to get.
 
+Content:
+
+* [Node](#node)
+  * [tag](#property-tag)
+  * [opt](#property-opt)
+  * [val](#property-val)
+  * [sub](#property-sub)
+  * [_id](#property-_id)
+  * [sav](#properties-sav-and-_el)
+  * [_el](#properties-sav-and-_el)
+* [Properties](#tree-instance-properties)
+  * [tree](#tree)
+  * [xmlns](#xmlns)
+* [Methods](#methods)
+  * [constructor](#constructor)
+  * [compile](#compile)
+  * [recompile](#recompile)
+  * [find](#find)
+  * [append](#append)
+  * [prepend](#prepend)
+  * [analyze](#analyze)
+
+---
+
 ## Node
 
 Each `node` is an object that represents one DOM element.
