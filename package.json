@@ -1,0 +1,24 @@
+{
+  "name": "svg-easy-tree",
+  "version": "1.0.0",
+  "description": "Creates svg depends on easy structured tree object",
+  "main": "tree.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Liksu/svg-easy-tree.git"
+  },
+  "keywords": [
+    "svg",
+    "chart",
+    "dom"
+  ],
+  "author": "Petro Borshchahivskyi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Liksu/svg-easy-tree/issues"
+  },
+  "homepage": "https://Liksu.github.io/svg-easy-tree"
+}
