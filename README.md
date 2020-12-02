@@ -44,6 +44,11 @@ Allowed properties (jsdoc notation):
  @property {Element}       [_el]
 ```
 
+All other properties and methods of node will be ignored.
+So that, you can create a class that represent and take care about a part of the tree
+and put its instance inside as a node. In this case, class can operate with created element
+via provided `_el` property, or modify own node properties and use `recompile`.
+
 #### Property `tag`
 
 _Type: String_
