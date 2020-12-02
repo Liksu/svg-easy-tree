@@ -57,7 +57,7 @@ will produce
 
 #### Property `val`
 
-_Type: String | Number_
+_Type: String &#124; Number_
 
 Sets the inner value of created element. By default, that means some text or number,
 but in real the passed value will be put in the element.innerHTML,
@@ -147,7 +147,7 @@ Result:
 
 _Type `sav`: Boolean_
 
-_Type `_el`: SVGElement | HTMLElement_
+_Type `_el`: SVGElement &#124; HTMLElement_
 
 Two these properties are directly tied, because `_el` property
 will automatically contains link to generated DOM element, if `sav` property sets to `true`.
