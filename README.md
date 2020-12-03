@@ -449,9 +449,10 @@ setInterval(() => {
 ```
 
 <noscript>
-Check working example [here](https://liksu.github.io/svg-easy-tree/#example).
+Check working example here: https://liksu.github.io/svg-easy-tree/#example
 
 And nevermind next script tag (if shown) 😉
 </noscript>
+
 
 <script src="README.js" type="module"></script>
