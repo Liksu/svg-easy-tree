@@ -1,4 +1,4 @@
-import Tree from './tree';
+import Tree from './tree.js';
 
 // get element from page and calculate sizes
 const wrapper = document.getElementById('chart-wrapper');
