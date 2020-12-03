@@ -309,6 +309,7 @@ Returns `node` with serialized tree.
 
 <div id="chart-wrapper" style="width: 500px; height: 300px"></div>
 
+
 ```js
 // get element from page and calculate sizes
 const wrapper = document.getElementById('chart-wrapper');
@@ -448,7 +449,12 @@ setInterval(() => {
 ```
 
 <noscript>
-    <p>Check working example <a src="https://liksu.github.io/svg-easy-tree/#example">here</a>.</p>
+    <p>
+        <span>Check working example</span>
+        <a src="https://liksu.github.io/svg-easy-tree/#example">here</a>
+        <span>.</span>
+    </p>
     <p>And nevermind next script tag (if shown) 😉</p>
 </noscript>
+
 <script src="README.js" type="module"></script>
