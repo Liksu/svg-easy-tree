@@ -109,7 +109,7 @@ Result:
 
 #### Property `sub`
 
-_Type: Array<node>_
+_Type: Array&lt;node&gt;_
 
 Contains subtree, array of nodes that will be compiled recursively.
 Can also contains everything, that can be appended to DOM element.
