@@ -14,11 +14,19 @@
  * @property {Element}       [_el]
  */
 
+/**
+ * @property {node} tree
+ * @property {string} xmlns
+ */
 export default class Tree {
     static ns_HTML = 'http://www.w3.org/1999/xhtml';
     static ns_SVG = 'http://www.w3.org/2000/svg';
     static attributeId = 'x-id';
 
+    /**
+     * @param {node|Element} [initialTree]
+     * @param {string} [xmlns]
+     */
     constructor(initialTree, xmlns = Tree.ns_SVG) {
         this.xmlns = xmlns;
         this.tree = initialTree instanceof Element
@@ -29,7 +37,7 @@ export default class Tree {
     /**
      * Create dom element from node object
      *
-     * @param {node} node
+     * @param {node|Element} node
      * @param {Element} [parent]
      * @returns {Element}
      */
@@ -58,9 +66,9 @@ export default class Tree {
     /**
      * Compile tree into dom structure and append it to parent element
      *
-     * @param {node} node
-     * @param {Element} parent
-     * @returns {null|Element}
+     * @param {node} [node]
+     * @param {Element} [parent]
+     * @returns {Element|null}
      */
     compile(node = this.tree, parent = null) {
         if (!node) node = this.tree;
@@ -104,10 +112,10 @@ export default class Tree {
      * has issue with partial selectors like 'hours/line' instead of full '/main/hours/line'
      * best usage for now is to find plugin by id
      *
-     * @param selector - id of node or path from root like '/main/...', if node has _id it will be used to compare with selector, otherwise - tag
-     * @param [tree]
-     * @param [path]
-     * @returns {null|{}}
+     * @param {String} selector - id of node or path from root like '/main/...', if node has _id it will be used to compare with selector, otherwise - tag
+     * @param {node} [tree]
+     * @param {String} [path]
+     * @returns {node|null}
      */
     find(selector, tree = this.tree, path = '') {
         if (tree._id == selector) return tree;
@@ -126,7 +134,7 @@ export default class Tree {
      *
      * @param {String|Number} selector
      * @param {node} tree
-     * @returns {*[]|*|{}}
+     * @returns {node|node[]}
      */
     q(selector, tree = this.tree) {
         if (tree._id == selector) return tree;
@@ -140,8 +148,8 @@ export default class Tree {
     /**
      * Appends subTree to passed node
      *
-     * @param {node|string} node - node to append subTree or selector to find such node
-     * @param {node|Object|null|Array<node>} subTree
+     * @param {node|node[]|string|Tree} node - node to append subTree or selector to find such node
+     * @param {node|Object|null|Array<node>|Tree} [subTree]
      * @param {boolean} [before=false] - prepend if true
      * @returns {node}
      */
@@ -171,8 +179,8 @@ export default class Tree {
     /**
      * Prepend subTree to node
      *
-     * @param {node|string} node - node to append subTree or selector to find such node
-     * @param {node|Object|null|Array<node>} subTree
+     * @param {node|node[]|string|Tree} node - node to append subTree or selector to find such node
+     * @param {node|Object|null|Array<node>|Tree} subTree
      * @returns {node}
      */
     prepend(node, subTree) {
@@ -182,7 +190,7 @@ export default class Tree {
     /**
      * Restore tree from existing DOM
      *
-     * @param _el - DOM element
+     * @param {Element} _el - DOM element
      * @returns {node}
      */
     analyze(_el) {

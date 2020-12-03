@@ -1,6 +1,6 @@
 {
   "name": "svg-easy-tree",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Creates svg depends on easy structured tree object",
   "main": "tree.js",
   "scripts": {
